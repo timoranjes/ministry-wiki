@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: 道詞 Ministry Wiki
+  pageTitle: 道詞
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
@@ -181,6 +181,8 @@ plugins:
       group: toolbar
   - source: github:quartz-community/breadcrumbs
     enabled: true
+    options:
+      rootName: 首頁
     layout:
       position: beforeBody
       priority: 5

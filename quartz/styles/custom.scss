@@ -799,6 +799,13 @@ body:has(.darkmode .sun[style*="display: block"]) {
   }
 }
 
+// ─── Reader Mode Sidebar Fix ───────────────────────────────────────────────
+// Override reader-mode's opacity:0 that hides sidebars until hover
+:root[reader-mode="on"] .sidebar.left,
+:root[reader-mode="on"] .sidebar.right {
+  opacity: 1 !important;
+}
+
 // ─── Print Styles ──────────────────────────────────────────────────────────
 @media print {
   .sidebar,
