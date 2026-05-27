@@ -24,6 +24,9 @@ jobs:
       - name: Install Quartz
         run: npm ci
 
+      - name: Sync plugins
+        run: npx quartz sync --no-pull
+
       - name: Build Quartz site
         run: npx quartz build
 
