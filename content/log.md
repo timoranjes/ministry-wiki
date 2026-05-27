@@ -57,16 +57,16 @@ All 63 Bible pages now have:
 ### 創建實體頁面（8 個）
 
 #### 作者實體（2 個）
-- `entities/倪柝声.md` —— Watchman Nee 傳記實體頁面，含生平、著作、影響等
+- `entities/倪柝聲.md` —— Watchman Nee 傳記實體頁面，含生平、著作、影響等
 - `entities/李常受.md` —— Witness Lee 傳記實體頁面，含生平、貢獻、職事特點等
 
 #### 著作系列概覽（6 個）
 - `entities/生命讀經.md` —— 列出全部 63 冊生命讀經書目（1984 篇信息），含 wikilinks 至 raw/生命讀經/ 各子目錄
 - `entities/恢復本聖經.md` —— 列出全部 66 卷恢復本聖經書目，描述經文/綱目/腳注三大特色
-- `entities/造就类.md` —— 359 篇信息概覽，涵蓋生命認識、經歷、初信造就、敬拜禱告等主題
-- `entities/教会与事奉类.md` —— 172 篇信息概覽，涵蓋召會真理、事奉配搭、神命定之路等主題
-- `entities/福音类.md` —— 70 篇信息概覽，涵蓋基本福音、認識基督、救恩真理、福音見證等主題
-- `entities/读经类.md` —— 43 篇信息概覽，涵蓋讀經方法、聖經要道、結晶讀經等主題
+- `entities/造就類.md` —— 359 篇信息概覽，涵蓋生命認識、經歷、初信造就、敬拜禱告等主題
+- `entities/教會與事奉類.md` —— 172 篇信息概覽，涵蓋召會真理、事奉配搭、神命定之路等主題
+- `entities/福音類.md` —— 70 篇信息概覽，涵蓋基本福音、認識基督、救恩真理、福音見證等主題
+- `entities/讀經類.md` —— 43 篇信息概覽，涵蓋讀經方法、聖經要道、結晶讀經等主題
 
 ### 創建索引文件
 - `index.md` —— Wiki 主索引，包含實體頁面列表、原始資料統計、Wiki 結構說明
@@ -81,12 +81,12 @@ All 63 Bible pages now have:
 
 #### 神學核心（9 個）
 - `concepts/三一神.md` —— 父、子、靈三一神，神聖經綸的源頭
-- `concepts/基督.md` —— 基督是一切，神的具体化身
+- `concepts/基督.md` —— 基督是一切，神的具體化身
 - `concepts/那靈.md` —— 經過過程的三一神作為賜生命的靈
 - `concepts/靈.md` —— 人的靈、聖靈、那靈的三重意義
 - `concepts/生命.md` —— 神聖生命，整本聖經的中心主題
 - `concepts/神的經綸.md` —— 神將自己分賜到人裡面的永遠計畫
-- `concepts/調和.md` —— 神性與人性調和為一的奧秘
+- `concepts/調和.md` —— 神性與人性調和為一的奧祕
 - `concepts/恩典.md` —— 三一神自己作到信徒裡面作享受
 - `concepts/律法.md` —— 摩西律法與生命之靈的律
 
@@ -156,46 +156,46 @@ All 63 Bible pages now have:
 - `log.md` —— 本更新日誌
 ---
 
-## 2026-05-24 — Phase 0: 基础修复
+## 2026-05-24 — Phase 0: 基礎修復
 
-### 基础设施
-- 初始化 Git 仓库，建立版本控制
-- 创建 .gitignore 排除 .obsidian/ 配置目录
+### 基礎設施
+- 初始化 Git 倉庫，建立版本控制
+- 創建 .gitignore 排除 .obsidian/ 配置目錄
 
-### Frontmatter 修复
-- 为所有 entities 页面添加 title 字段（8/10 成功，2 个 iCloud 锁定）
-- 修复所有 concepts 页面 tags：英文→中文（38 页）
+### Frontmatter 修復
+- 爲所有 entities 頁面添加 title 字段（8/10 成功，2 個 iCloud 鎖定）
+- 修復所有 concepts 頁面 tags：英文→中文（38 頁）
   - 例: church → 召會, life → 生命, Trinity → 三一神
-- 修复所有 comparisons 页面 tags（10 页）
+- 修復所有 comparisons 頁面 tags（10 頁）
 
 ### 空文件清理
-- 删除 2026-05-23.md（0 字节）
-- 删除 地方召會.md（0 字节）
-- 删除 詩篇生命讀經.md（0 字节）
+- 刪除 2026-05-23.md（0 字節）
+- 刪除 地方召會.md（0 字節）
+- 刪除 詩篇生命讀經.md（0 字節）
 
 ### index.md 重建
-- 旧 index.md 因 iCloud 同步锁定无法编辑，已替换
-- 新增完整目录索引（entities 8 + concepts 38 + comparisons 9）
-- 修正 raw 源文件计数（生命讀經: 2 → 1986，总计 2732 篇）
+- 舊 index.md 因 iCloud 同步鎖定無法編輯，已替換
+- 新增完整目錄索引（entities 8 + concepts 38 + comparisons 9）
+- 修正 raw 源文件計數（生命讀經: 2 → 1986，總計 2732 篇）
 
-### 链接修复
-- 修复 comparisons/index.md 中的非标准 wikilinks（[[concepts/召會]] → [[召會]]）
+### 鏈接修復
+- 修復 comparisons/index.md 中的非標準 wikilinks（[[concepts/召會]] → [[召會]]）
 
-### 已知问题（未解决）
-- entities/生命讀經.md — iCloud 锁定无法写入
-- entities/恢復本聖經.md — iCloud 锁定无法写入
-- 旧 index.md 备份为 index_old_locked.md
+### 已知問題（未解決）
+- entities/生命讀經.md — iCloud 鎖定無法寫入
+- entities/恢復本聖經.md — iCloud 鎖定無法寫入
+- 舊 index.md 備份爲 index_old_locked.md
 
-### Phase 0.3 — iCloud 锁定文件解决与计数修正
-- 删除 iCloud 锁定的  和 （无法读取，）
-- 重建两个 entity 页面，符合 SCHEMA.md 格式
-- 修正  raw 计数从 1986→1984（删除  和  两个 0 字节占位符）
-- 更新  中的计数
+### Phase 0.3 — iCloud 鎖定文件解決與計數修正
+- 刪除 iCloud 鎖定的  和 （無法讀取，）
+- 重建兩個 entity 頁面，符合 SCHEMA.md 格式
+- 修正  raw 計數從 1986→1984（刪除  和  兩個 0 字節佔位符）
+- 更新  中的計數
 
-### 已知的 iCloud 锁定问题
-- （原始版本）— 已替换为 
-- 原  — 已删除并重建
-- 原  — 已删除并重建
+### 已知的 iCloud 鎖定問題
+- （原始版本）— 已替換爲 
+- 原  — 已刪除並重建
+- 原  — 已刪除並重建
 
 ## [2026-05-24] update | concepts/召會.md — Phase 2 content deepening (81→112 lines)
 - 新增「職事啟示」section：召會所是重於所作、基督同召會是神經綸的祕訣
@@ -212,9 +212,9 @@ All 63 Bible pages now have:
 - 擴展「舊約中的呼求」：從以挪士到耶利米的完整歷史、屬靈呼吸的啟示
 - 擴展「新約時代的實化」：呼求作為基督徒的標記、保羅書信的強調
 - 擴展「呼求的目的」：五個目的（得救、蒙拯救、得聖靈、享豐富、奮起）
-- 擴展「呼求的路」：清潔的心、清潔的唇、敞開的口、團體呼求
+- 擴展「呼求的路」：清潔的心、清潔的脣、敞開的口、團體呼求
 - 新增關鍵經文：珥二32、賽十二4
-- 新增來源：造就类2091、福音类1054
+- 新增來源：造就類2091、福音類1054
 
 ## [2026-05-24] update | concepts/國度.md — Phase 2 content deepening (80→122 lines)
 - 新增「職事啟示」section：國度在靈裡的實際、國度作為操練、神救恩的目標作成賞賜
@@ -240,7 +240,7 @@ All 63 Bible pages now have:
 
 ## [2026-05-24] update | concepts/交通.md — Phase 2 content deepening (99→143 lines)
 - 新增「職事啟示」section：交通是生命的共同有分、兩面交通（垂直與水平）、十字架對付交通攔阻
-- 新增「實行應用」section：靈裡與主接觸、彼此认罪、持續的交通生活、不批評不定罪
+- 新增「實行應用」section：靈裡與主接觸、彼此認罪、持續的交通生活、不批評不定罪
 - 擴展「定義」：交通作為生命流通的比喻、與神聖經綸的關係、召會歷史中交通破裂的例子
 - 擴展「與三一神的交通」：約翰壹書在光中交通的啟示
 - 擴展「聖靈的交通」：那靈的交通是流通如同血液循環、膏油塗抹與交通的關係
@@ -252,7 +252,7 @@ All 63 Bible pages now have:
 - 新增來源：約翰一書、哥林多前書生命讀經
 
 ## [2026-05-24] update | concepts/十字架.md — Phase 2 content deepening (142→168 lines)
-- 新增「職事啟示」section：十字架與高峰真理並行、十字架不是消極乃是積極、職事的關切
+- 新增「職事啟示」section：十字架與高峯真理並行、十字架不是消極乃是積極、職事的關切
 - 新增「實行應用」section：否認己的操練、背起十字架的意義、不住禱告的操練、具體十字架實行
 - 擴展「定義」：十字架客觀與主觀兩方面的關係、十字架是召會屬靈憲章第一條
 - 擴展「基督的釘十字架」：七項資格、了結舊造產生新造、十字架拯救脫離一切消極事物
@@ -260,7 +260,7 @@ All 63 Bible pages now have:
 - 擴展「模成基督的死」：天天被帶到死的地位、天然生命好的一面也需要被治死
 - 擴展「十字架了結一切」：積極事物也需要被了結、凡不出於神的都要被對付
 - 擴展「十字架與召會的建造」：三把鑰匙、十字架是檢查站、十字架產生合一的身體
-- 擴展「十字架與那靈的運行」：十字架預備器皿那靈充滿器皿、四只「地鼠」的警告
+- 擴展「十字架與那靈的運行」：十字架預備器皿那靈充滿器皿、四隻「地鼠」的警告
 - 擴展「十字架產生生命」：死產生生命、信徒藉十字架產生生命供應別人
 - 新增關鍵經文：林前一23～24、來十二2
 - 新增相關概念：復活、榮耀
@@ -270,7 +270,7 @@ All 63 Bible pages now have:
 - 新增「職事啟示」section：基督作生命、包羅萬有的靈、召會頭與身體的啟示
 - 新增「實行應用」section：以基督作生命活每一天、享受基督作生命供應
 - 擴展「定義」：基督是三一神的具體化身、包羅萬有
-- 擴展「概念發展」：基督的七方面（神人二性、救贖、復活、升天等）
+- 擴展「概念發展」：基督的七方面（神人二性、救贖、復活、昇天等）
 - 新增關鍵經文：腓一21、西二9、約一14
 - 新增來源：歌羅西書生命讀經、腓立比書生命讀經
 
@@ -283,7 +283,7 @@ All 63 Bible pages now have:
 - 新增來源：初信餵養365題、晨興聖言初信讀本
 
 ## [2026-05-24] update | concepts/小排.md — Phase 2 content deepening (67→114 lines)
-- 新增「職事啟示」section：小排是召會實行生活的主要部分、彼此互相性、繁殖扩增
+- 新增「職事啟示」section：小排是召會實行生活的主要部分、彼此互相性、繁殖擴增
 - 新增「實行應用」section：五項內容、人人盡功用、定期分排、教導申言
 - 擴展「定義」：小排與家聚會的區別、小排作為「教/成全」的實行
 - 擴展「概念發展」：使徒行傳的實行、保羅書信的見證、小排五大事項
@@ -338,9 +338,9 @@ All 63 Bible pages now have:
 ### 最終狀態
 
 - **38 個概念頁面**全部完成 Phase 2 深化
-- 所有頁面包含：frontmatter、## 定義、## 關鍵經文- 、## 概念發展、## 職事啟示、## 實行應用、## 相關概念、## 來源
-- - 所有 `updated: 2026-05-24`
-- - 零入站頁面：0（Phase 1 已解決）
+- 所有頁面包含：frontmatter、## 定義、## 關鍵經文、## 概念發展、## 職事啟示、## 實行應用、## 相關概念、## 來源
+- 所有 `updated: 2026-05-24`
+- 零入站頁面：0（Phase 1 已解決）
 
 ## Phase 1 結構修復完成 ✅
 
@@ -353,7 +353,7 @@ All 63 Bible pages now have:
 
 ### 新建頁面
 - **Concepts (15)**: 地方召會、主的恢復、職事、福音、信心、享受基督、肉體、神命定之路、活基督、心思、膏油塗抹、成為肉體、話、接枝、新約
-- **Entities (2)**: 余慈度、和受恩
+- **Entities (2)**: 餘慈度、和受恩
 
 ### 變更統計
 - **64 個檔案**修改，**2455 行**新增 / **1184 行**刪除
@@ -361,57 +361,57 @@ All 63 Bible pages now have:
 
 ---
 
-## Phase 4：元数据标准化 ✅
+## Phase 4：元數據標準化 ✅
 
-### 执行总结
-为全部 2730 个 raw 文件补充 YAML frontmatter
+### 執行總結
+爲全部 2730 個 raw 文件補充 YAML frontmatter
 
-| 类别 | 文件数 | 格式转换 |
+| 類別 | 文件數 | 格式轉換 |
 |------|--------|----------|
 | 生命讀經 | 1984 | `# 書名` + `- **篇號：**` → `book`, `chapter` |
-| 福音类/造就类/读经类/教会与事奉类/其他 | 680 | `# 書號：` / `# 書名：` → `title`, `book_number` |
+| 福音類/造就類/讀經類/教會與事奉類/其他 | 680 | `# 書號：` / `# 書名：` → `title`, `book_number` |
 | 恢復本聖經 | 66 | key-value 行 → YAML（統一 key 名） |
 
 ### 字段映射
 | 原始 key | YAML key | 說明 |
 |----------|----------|------|
-| `# 書號：` | `book_number` | 书籍编号 |
-| `# 書名：` / `# 書名` | `title` / `book` | 书名 |
+| `# 書號：` | `book_number` | 書籍編號 |
+| `# 書名：` / `# 書名` | `title` / `book` | 書名 |
 | `# 作者：` / `- **作者：**` | `author` | 作者 |
-| `# 分類：` / `- **分類：**` | `category` | 分类 |
-| `# 來源:` / `- **來源：**` / `來源` | `source_url` | 来源 URL |
-| `- **篇號：**` | `chapter` | 篇章标题 |
-| `著時` | `date` | 写作时间 |
-| `著地` | `location` | 写作地点 |
-| `涵蓋時段` | `time_period` | 涵盖时段 |
-| `主題` | `topic` | 主题 |
+| `# 分類：` / `- **分類：**` | `category` | 分類 |
+| `# 來源:` / `- **來源：**` / `來源` | `source_url` | 來源 URL |
+| `- **篇號：**` | `chapter` | 篇章標題 |
+| `著時` | `date` | 寫作時間 |
+| `著地` | `location` | 寫作地點 |
+| `涵蓋時段` | `time_period` | 涵蓋時段 |
+| `主題` | `topic` | 主題 |
 
-### 变更统计
-- **2730 个文件**全部拥有合法 YAML frontmatter
+### 變更統計
+- **2730 個文件**全部擁有合法 YAML frontmatter
 - Git commit `6cd6696`：2730 files changed (+21075 / -106295 lines)
-- source_url 覆盖率：2728/2730（2 个教会与事奉类文件无外部来源 URL）
+- source_url 覆蓋率：2728/2730（2 個教會與事奉類文件無外部來源 URL）
 
 ---
 
-## Phase 2 剩余：实体深化 + 圣经书卷 ✅
+## Phase 2 剩餘：實體深化 + 聖經書卷 ✅
 
-### 执行总结
+### 執行總結
 
-#### 实体页面扩展（2 个）
-- **倪柝声**：51 行 → 生平、属灵贡献、主要著作、对恢复运动的影响
-- **李常受**：52 行 → 生平、生命读经/结晶读经、全球扩展、水流职事站
+#### 實體頁面擴展（2 個）
+- **倪柝聲**：51 行 → 生平、屬靈貢獻、主要著作、對恢復運動的影響
+- **李常受**：52 行 → 生平、生命讀經/結晶讀經、全球擴展、水流職事站
 
-#### 圣经书卷页面创建（63 个）
-| 类别 | 数量 | 说明 |
+#### 聖經書卷頁面創建（63 個）
+| 類別 | 數量 | 說明 |
 |------|------|------|
-| 舊約 | 36 | 创世记 → 玛拉基书（撒母耳记/列王纪/历代志上下各合 1） |
-| 新約 | 27 | 马太福音 → 启示录 |
+| 舊約 | 36 | 創世記 → 瑪拉基書（撒母耳記/列王紀/歷代志上下各合 1） |
+| 新約 | 27 | 馬太福音 → 啓示錄 |
 
-每页结构：定义、关键经文、概念发展、职事启示、实行应用、相关概念、来源
-来源指向 `raw/恢复本圣经/` 对应文件
+每頁結構：定義、關鍵經文、概念發展、職事啓示、實行應用、相關概念、來源
+來源指向 `raw/恢復本聖經/` 對應文件
 
-### 变更统计
-- **65 个文件**修改（2 实体 + 63 书卷），**2903 行**新增
+### 變更統計
+- **65 個文件**修改（2 實體 + 63 書卷），**2903 行**新增
 - Git commit `73ef835`
 ### Phase 3.2: 結晶讀經抓取 (lsmchinese.org)
 - 7 個檔案: 約翰福音.md, 馬太福音.md, 羅馬書.md, 基督的人性.md, 雅歌.md, 雅各書.md, 神完整的救恩.md
@@ -420,7 +420,7 @@ All 63 Bible pages now have:
 - 0 個檔案: 
 
 ### Phase 3.4: 教會歷史抓取 (ll.stmn1.com)
-- 5 個檔案: 返回首页.md, 编者的话.md, 作者－该撒利亚的优西乌（Eusebius_of_Caesrea)-生平简志.md, 卷一.md, 卷二.md
+- 5 個檔案: 返回首頁.md, 編者的話.md, 作者－該撒利亞的優西烏（Eusebius_of_Caesrea)-生平簡志.md, 卷一.md, 卷二.md
 
 ### Phase 3.2: 結晶讀經抓取 (lsmchinese.org)
 - 7 個檔案: 約翰福音.md, 馬太福音.md, 羅馬書.md, 基督的人性.md, 雅歌.md, 雅各書.md, 神完整的救恩.md
@@ -429,7 +429,7 @@ All 63 Bible pages now have:
 - 2 個檔案: 2025_特會訓練綱要.md, 2024_特會訓練綱要.md
 
 ### Phase 3.4: 教會歷史抓取 (ll.stmn1.com)
-- 12 個檔案: 编者的话.md, 作者－该撒利亚的优西乌（Eusebius_of_Caesrea)-生平简志.md, 卷一.md, 卷二.md, 卷三.md, 卷四.md, 卷五.md, 卷六.md, 卷七.md, 卷八.md, 卷九.md, 卷十.md
+- 12 個檔案: 編者的話.md, 作者－該撒利亞的優西烏（Eusebius_of_Caesrea)-生平簡志.md, 卷一.md, 卷二.md, 卷三.md, 卷四.md, 卷五.md, 卷六.md, 卷七.md, 卷八.md, 卷九.md, 卷十.md
 
 ### Phase 3.2: 結晶讀經抓取 (lsmchinese.org)
 - 5 個檔案: 約翰福音.md, 馬太福音.md, 羅馬書.md, 基督的人性.md, 神完整的救恩.md
@@ -438,7 +438,7 @@ All 63 Bible pages now have:
 - 5 個檔案: 2025_特會訓練綱要.md, 2024_特會訓練綱要.md, 2023_特會訓練綱要.md, 2022_特會訓練綱要.md, 2021_特會訓練綱要.md
 
 ### Phase 3.4: 教會歷史抓取 (ll.stmn1.com)
-- 12 個檔案: 编者的话.md, 作者－该撒利亚的优西乌（Eusebius_of_Caesrea)-生平简志.md, 卷一.md, 卷二.md, 卷三.md, 卷四.md, 卷五.md, 卷六.md, 卷七.md, 卷八.md, 卷九.md, 卷十.md
+- 12 個檔案: 編者的話.md, 作者－該撒利亞的優西烏（Eusebius_of_Caesrea)-生平簡志.md, 卷一.md, 卷二.md, 卷三.md, 卷四.md, 卷五.md, 卷六.md, 卷七.md, 卷八.md, 卷九.md, 卷十.md
 
 ### Phase 3.2: 結晶讀經抓取 (lsmchinese.org)
 - 5 個檔案: 約翰福音.md, 馬太福音.md, 羅馬書.md, 基督的人性.md, 神完整的救恩.md
@@ -447,7 +447,7 @@ All 63 Bible pages now have:
 - 5 個檔案: 2025_特會訓練綱要.md, 2024_特會訓練綱要.md, 2023_特會訓練綱要.md, 2022_特會訓練綱要.md, 2021_特會訓練綱要.md
 
 ### Phase 3.4: 教會歷史抓取 (ll.stmn1.com)
-- 12 個檔案: 编者的话.md, 作者－该撒利亚的优西乌（Eusebius_of_Caesrea)-生平简志.md, 卷一.md, 卷二.md, 卷三.md, 卷四.md, 卷五.md, 卷六.md, 卷七.md, 卷八.md, 卷九.md, 卷十.md
+- 12 個檔案: 編者的話.md, 作者－該撒利亞的優西烏（Eusebius_of_Caesrea)-生平簡志.md, 卷一.md, 卷二.md, 卷三.md, 卷四.md, 卷五.md, 卷六.md, 卷七.md, 卷八.md, 卷九.md, 卷十.md
 
 ### Phase 3.2: 結晶讀經抓取 (lsmchinese.org)
 - 7 個檔案: 約翰福音.md, 馬太福音.md, 羅馬書.md, 基督的人性.md, 雅歌.md, 雅各書.md, 神完整的救恩.md
@@ -456,7 +456,7 @@ All 63 Bible pages now have:
 - 5 個檔案: 2025_特會訓練綱要.md, 2024_特會訓練綱要.md, 2023_特會訓練綱要.md, 2022_特會訓練綱要.md, 2021_特會訓練綱要.md
 
 ### Phase 3.4: 教會歷史抓取 (ll.stmn1.com)
-- 12 個檔案: 编者的话.md, 作者－该撒利亚的优西乌（Eusebius_of_Caesrea)-生平简志.md, 卷一.md, 卷二.md, 卷三.md, 卷四.md, 卷五.md, 卷六.md, 卷七.md, 卷八.md, 卷九.md, 卷十.md
+- 12 個檔案: 編者的話.md, 作者－該撒利亞的優西烏（Eusebius_of_Caesrea)-生平簡志.md, 卷一.md, 卷二.md, 卷三.md, 卷四.md, 卷五.md, 卷六.md, 卷七.md, 卷八.md, 卷九.md, 卷十.md
 
 ## [2026-05-24] Phase 3: 外部資料抓取與整合 | 完成
 - **3.1 爬蟲基礎設施：** 編寫 `scripts/scrape_phase3.py` + `scripts/scrape_catalog.py`
@@ -481,7 +481,7 @@ All 63 Bible pages now have:
 - **Audit tool:** Full programmatic scan (entities/concepts/comparisons)
 - **Frontmatter fixed:** 89 pages — added missing `title` (65), `created` (89), `type` (6), `tags` (65)
 - **Index updated:** index.md — 56 → 136 wiki pages (all pages now listed)
-  - Entities: 8 → 10 (added: 余慈度, 和受恩)
+  - Entities: 8 → 10 (added: 餘慈度, 和受恩)
   - Concepts: 39 → 117 (added: 63 Bible books + 15 concept pages)
   - Comparisons: 9 (unchanged)
 - **Remaining issues:**
@@ -496,14 +496,14 @@ All 63 Bible pages now have:
 
 ## [2026-05-24] fix | Broken wikilinks audit + new concept pages
 - **New concept pages:** 9 created (神聖生命, 基督的身體, 生命樹, 智慧, 神聖的分賜, 呼求主名, 永遠的生命, 經歷基督, 召會生活)
-- **Typo fix:** 倪柝聲 → 倪柝声 in 3 files
+- **Typo fix:** 倪柝聲 → 倪柝聲 in 3 files
 - **Low-freq broken links:** 129 stripped from 50 files (targets with 1-2 refs)
 - **index.md:** 136 → 145 wiki pages (added 9 new concepts)
 - **Remaining broken links:** ~20 (single-ref targets, kept as-is for future page creation)
 
 ## [2026-05-24] fix | Phase 2: Broken links, tag taxonomy, orphans
 - **New concept pages:** 9 (神聖生命, 基督的身體, 生命樹, 智慧, 神聖的分冊, 呼求主名, 永遠的生命, 經歷基督, 召會生活)
-- **Typo fix:** 倪柝聲 → 倪柝声 in 3 files
+- **Typo fix:** 倪柝聲 → 倪柝聲 in 3 files
 - **Low-freq broken wikilinks:** 129 stripped from 50 files
 - **YAML syntax fix:** 63 files with malformed frontmatter (`tags: [general] concept` → proper format)
 - **Tag taxonomy audit:** 98 invalid tags mapped to taxonomy across 69 files; SCHEMA.md taxonomy expanded with 14 new tags
@@ -614,7 +614,7 @@ All 63 Bible pages now have:
 
 ### 建議深化
 - 74 個 moderate pages 可深化至 100+ lines
-- 實體頁 (倪柝声, 李常受) 缺少 ## 概念發展, ## 職事啟示, ## 實行應用
+- 實體頁 (倪柝聲, 李常受) 缺少 ## 概念發展, ## 職事啟示, ## 實行應用
 - 聖經書卷可從 raw/生命讀經/ 提取更多綱目和職事啟示
 
 ### Files changed
@@ -638,7 +638,7 @@ Full structural and content enhancement across all 147 wiki pages.
 - **entities/李常受.md**: Expanded from 59 → 122 lines
   - Added: 關鍵經文 (10 verses), 職事貢獻 (4 sub-sections), 對恢復運動的影響
   - Updated tags, sources
-- **entities/倪柝声.md**: Previously at 108 lines (retained, already structured)
+- **entities/倪柝聲.md**: Previously at 108 lines (retained, already structured)
 
 #### 2. Thin Concept Pages Completed (2/2)
 - **concepts/公義.md**: 129 lines — completed with 來源
@@ -683,7 +683,7 @@ Added 概念發展 and 實行應用 to all 9 comparison pages:
 ### Remaining Enhancement Opportunities
 1. **7 thin Bible pages** (50-79 lines) — inherently short books (腓利門書 1 chapter, 俄巴底亞書 21 verses, etc.)
 2. **Concept pages at 100-149 lines** — 18 pages could benefit from deeper 概念發展 and 職事啟示
-3. **Entity pages at 100 lines** — 倪柝声, 余慈度 could be expanded with more biographical detail
+3. **Entity pages at 100 lines** — 倪柝聲, 餘慈度 could be expanded with more biographical detail
 4. **Comparison pages at 80-89 lines** — rich content but could expand with more scripture references
 
 ## 2026-05-27 - Bible Books Content Rebuild
@@ -806,7 +806,7 @@ target: bible/*.md (職事啟示 & 實行應用 sections)
 - **Comparison pages (9)**: ## 概述→## 定義, ## 比較表→## 比較, ## 職事觀點→## 職事啟示. All 9 files aligned.
 - **New concept pages (18)**: 審判, 聖殿, 重建, 盼望, 大衛, 愛, 主再來, 耶和華的日子, 背道, 異象, 悔改, 真理, 聖靈, 拯救, 敬畏神, 彌賽亞, 苦難, 假教師
 - **Single-ref wikilinks stripped**: 57 unique targets removed from 41 files
-- **SC→TC wikilink fixes**: 17 mappings applied (那灵→那靈, 圣别→聖別, etc.) in 2 files
+- **SC→TC wikilink fixes**: 17 mappings applied (那靈→那靈, 聖別→聖別, etc.) in 2 files
 - **index.md**: Updated concept count 65→83, total 147→166
 
 ### Final Metrics
@@ -824,8 +824,8 @@ target: bible/*.md (職事啟示 & 實行應用 sections)
 - Update index.md structure and counts
 
 ### Changes
-- **Directory split**: Moved 4 person pages to `entities/persons/` (倪柝声, 李常受, 余慈度, 和受受恩) and 6 source pages to `entities/sources/` (恢復本聖經, 生命讀經, 教会与事奉类, 福音类, 读经类, 造就类)
-- **New source entities (5)**: 結晶讀經 (7 raw files), 特會信息 (20), 教會歷史 (12), 屬靈書報 (7), 代售与期刊类 (19)
+- **Directory split**: Moved 4 person pages to `entities/persons/` (倪柝聲, 李常受, 餘慈度, 和受受恩) and 6 source pages to `entities/sources/` (恢復本聖經, 生命讀經, 教會與事奉類, 福音類, 讀經類, 造就類)
+- **New source entities (5)**: 結晶讀經 (7 raw files), 特會信息 (20), 教會歷史 (12), 屬靈書報 (7), 代售與期刊類 (19)
 - **index.md**: Entity count 10→15, total 165→170, added 人物/職事出版物 subsections
 - **wikilinks**: No path changes — all `[[wikilink]]` references remain valid
 
@@ -899,8 +899,8 @@ target: bible/*.md (職事啟示 & 實行應用 sections)
   - 個人 (2 refs), 道理 (2 refs), 舊造 (2 refs), 新造 (2 refs), 知識 (2 refs), 教導 (2 refs)
   - 魂 (2 refs), 神性 (2 refs), 正常的基督徒生活 (2 refs), 教會與事奉 (4 refs)
 - Created 1 entity page: 保羅 (entities/persons/)
-- Stripped 22 single-ref aspirational wikilinks: 異端, 信仰, 豫言, 被提, 大災難, 新天新地, 神, 罪, 赦免, 撒母耳記上, 光, 启示, 自由, 善惡, 團體, 弗一17, 行為, 來四12, 工作, 人基督耶穌, 人性, 字句
-- Fixed 定義 sections on 4 entity source pages: 教会与事奉类, 福音类, 读经类, 造就类
+- Stripped 22 single-ref aspirational wikilinks: 異端, 信仰, 豫言, 被提, 大災難, 新天新地, 神, 罪, 赦免, 撒母耳記上, 光, 啓示, 自由, 善惡, 團體, 弗一17, 行為, 來四12, 工作, 人基督耶穌, 人性, 字句
+- Fixed 定義 sections on 4 entity source pages: 教會與事奉類, 福音類, 讀經類, 造就類
 - Updated index.md: concepts 83→99, total 176→193, added 6 missing entries
 - Remaining broken wikilinks: 15 unique targets, 17 instances (all 1-2 refs, aspirational)
 
@@ -912,3 +912,12 @@ target: bible/*.md (職事啟示 & 實行應用 sections)
 - Final broken wikilink count: 0
 - Updated index.md: concepts 99→101, total 193→195
 
+
+### 2026-05-27 — Cleanup: Remove inline provenance markers from wiki pages
+- Removed all `^[raw/...]` provenance footnotes from wiki page bodies (2,059 instances across 112 files)
+- Removed `[raw/...](raw/...)` unclickable directory links from 19 concept pages
+- Fixed malformed nested wikilink provenance marker in 新耶路撒冷.md (15 additional occurrences with nested wikilinks)
+- Cleaned up plain-text `raw/` source references in 6 concept pages and 1 entity page
+- Total files modified: 119
+- Rationale: provenance markers exposed raw directory paths, creating visual noise for external browsing. Source attribution preserved via `sources:` in YAML frontmatter.
+- Updated SCHEMA.md: replaced provenance marker convention with frontmatter-only source attribution rule.
