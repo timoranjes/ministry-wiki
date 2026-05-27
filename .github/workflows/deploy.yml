@@ -27,6 +27,9 @@ jobs:
       - name: Install plugins
         run: npx quartz plugin install
 
+      - name: Apply zh-TW i18n patches
+        run: chmod +x scripts/patch-i18n.sh && bash scripts/patch-i18n.sh
+
       - name: Build Quartz site
         run: npx quartz build
 
