@@ -1,3 +1,825 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// ============================================================================
+// Ministry Wiki UI/UX Redesign — Custom Styles
+// Navy/Gold TC Aesthetic for Quartz v5
+// ============================================================================
+
+// ─── Typography Enhancement ────────────────────────────────────────────────
+body {
+  font-size: 17px;
+  line-height: 1.9;
+  letter-spacing: 0.01em;
+}
+
+p,
+li,
+td,
+th {
+  line-height: 1.9;
+}
+
+// Chinese character spacing improvement
+:lang(zh-TW),
+:lang(zh-CN),
+:lang(zh-Hant),
+:lang(zh-Hans) {
+  letter-spacing: 0.02em;
+}
+
+// Heading hierarchy with gold underline dividers
+h1 {
+  font-size: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid var(--tertiary);
+  color: var(--dark);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--highlight);
+  color: var(--dark);
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1.05rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+// ─── Header Branding ───────────────────────────────────────────────────────
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 2rem 0;
+  padding: 1.5rem 2rem 1.25rem;
+  background: linear-gradient(135deg, var(--dark) 0%, var(--secondary) 100%);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--tertiary), var(--lightgray), var(--tertiary));
+  }
+
+  h1 {
+    margin: 0;
+    flex: auto;
+    font-size: 1.6rem;
+    color: #faf8f5 !important;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  // Subtitle beneath page title
+  .page-header > p,
+  .description {
+    color: rgba(250, 248, 245, 0.7) !important;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+  }
+}
+
+// ─── Sidebar Left (Explorer + Search) ──────────────────────────────────────
+.sidebar.left {
+  gap: 0.75rem;
+}
+
+// Explorer panel
+.explorer {
+  background: transparent;
+  border: none;
+  padding: 0;
+
+  &.overflow {
+    max-height: none;
+  }
+}
+
+// Explorer tree styling
+.explorer {
+  .folder-title {
+    font-weight: 600;
+    color: var(--dark);
+    padding: 0.35rem 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    &:hover {
+      color: var(--tertiary);
+    }
+  }
+
+  .folder-icon {
+    color: var(--tertiary);
+    transition: transform 0.2s ease;
+    font-size: 0.85em;
+  }
+
+  .folder-icon.open {
+    transform: rotate(90deg);
+  }
+
+  a {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: background 0.15s ease, color 0.15s ease;
+    font-size: 0.9em;
+    display: block;
+    margin: 0.1rem 0;
+
+    &:hover {
+      background: var(--highlight);
+      color: var(--secondary);
+    }
+
+    &.active {
+      background: var(--highlight);
+      color: var(--secondary);
+      font-weight: 600;
+    }
+  }
+
+  // Indentation levels
+  ul {
+    padding-left: 1rem;
+    list-style: none;
+
+    ul {
+      padding-left: 1rem;
+    }
+  }
+
+  li {
+    line-height: 1.6;
+  }
+}
+
+// ─── Search Component ──────────────────────────────────────────────────────
+.search {
+  button,
+  [role="search"] {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 8px;
+    background: var(--light);
+    color: var(--gray);
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &:hover {
+      border-color: var(--tertiary);
+      box-shadow: 0 0 0 2px var(--highlight);
+    }
+
+    svg {
+      flex-shrink: 0;
+      color: var(--gray);
+    }
+  }
+}
+
+// ─── Toolbar (left sidebar top: page-title, darkmode, reader-mode) ─────────
+.page-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  h1 {
+    font-size: 1.1rem;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin: 0;
+    color: var(--secondary);
+  }
+}
+
+// Dark mode toggle button
+.darkmode {
+  button {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid var(--lightgray);
+    background: var(--light);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s, background 0.2s;
+
+    &:hover {
+      border-color: var(--tertiary);
+      background: var(--highlight);
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+// Reader mode toggle
+.reader-mode {
+  button {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid var(--lightgray);
+    background: var(--light);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s, background 0.2s;
+
+    &:hover {
+      border-color: var(--tertiary);
+      background: var(--highlight);
+    }
+  }
+}
+
+// ─── Breadcrumbs ───────────────────────────────────────────────────────────
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  font-size: 0.85em;
+  flex-wrap: wrap;
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--gray);
+
+    a {
+      color: var(--secondary);
+      background: none;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      transition: background 0.15s;
+
+      &:hover {
+        background: var(--highlight);
+        color: var(--tertiary);
+      }
+    }
+
+    &:not(:last-child)::after {
+      content: "›";
+      color: var(--lightgray);
+      font-size: 1.1em;
+      margin-left: 0.1rem;
+    }
+
+    &:last-child {
+      color: var(--dark);
+      font-weight: 500;
+    }
+  }
+}
+
+// ─── Note Properties (tags display) ────────────────────────────────────────
+.note-properties {
+  margin-bottom: 1rem;
+
+  .property {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  // Tag pills — gold badges
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+
+    a {
+      display: inline-block;
+      padding: 0.2rem 0.75rem;
+      background: var(--highlight);
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      border-radius: 12px;
+      font-size: 0.8em;
+      font-weight: 500;
+      color: var(--secondary);
+      text-decoration: none;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: var(--tertiary);
+        color: var(--dark);
+        border-color: var(--tertiary);
+      }
+    }
+  }
+}
+
+// ─── Article Title (beforeBody) ────────────────────────────────────────────
+.article-title {
+  h1 {
+    font-size: 2rem;
+    border-bottom: 3px solid var(--tertiary);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+  }
+}
+
+// ─── Content Meta (beforeBody) ─────────────────────────────────────────────
+.content-meta {
+  font-size: 0.85em;
+  color: var(--gray);
+  margin-bottom: 0.75rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  .reading-time,
+  .words,
+  .created-date,
+  .modified-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+}
+
+// ─── Sidebar Right (TOC + Graph + Backlinks) ───────────────────────────────
+.sidebar.right {
+  gap: 1rem;
+}
+
+// Table of Contents — sticky
+.toc {
+  position: sticky;
+  top: 2rem;
+
+  h3 {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray);
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid var(--lightgray);
+    padding-bottom: 0.5rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin: 0;
+      line-height: 1.5;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 0.25rem 0 0.25rem 0.75rem;
+    font-size: 0.85em;
+    color: var(--gray);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: var(--secondary);
+      border-left-color: var(--tertiary);
+    }
+
+    &.active {
+      color: var(--secondary);
+      font-weight: 600;
+      border-left-color: var(--tertiary);
+      background: var(--highlight);
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+  // Nested TOC levels
+  ul ul a {
+    padding-left: 1.5rem;
+    font-size: 0.8em;
+  }
+
+  ul ul ul a {
+    padding-left: 2.25rem;
+    font-size: 0.75em;
+  }
+}
+
+// ─── Graph View ────────────────────────────────────────────────────────────
+.graph {
+  border-radius: 8px;
+  border: 1px solid var(--lightgray);
+  overflow: hidden;
+  margin-bottom: 1rem;
+
+  h3 {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray);
+    padding: 0.75rem 1rem 0.5rem;
+    margin: 0;
+    border-bottom: 1px solid var(--lightgray);
+  }
+
+  iframe {
+    border: none;
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+// ─── Backlinks — redesigned as card ────────────────────────────────────────
+.backlinks {
+  border-radius: 8px;
+  border: 1px solid var(--lightgray);
+  padding: 0;
+  background: var(--light);
+
+  h3 {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray);
+    margin: 0;
+    padding: 0.75rem 1rem 0.5rem;
+    border-bottom: 1px solid var(--lightgray);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .backlink-count {
+      background: var(--highlight);
+      color: var(--tertiary);
+      padding: 0.1rem 0.5rem;
+      border-radius: 8px;
+      font-size: 0.85em;
+      font-weight: 600;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  li {
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  a {
+    display: block;
+    padding: 0.4rem 1rem;
+    font-size: 0.85em;
+    color: var(--secondary);
+    text-decoration: none;
+    transition: background 0.15s;
+
+    &:hover {
+      background: var(--highlight);
+    }
+  }
+
+  // "N more" expand for long lists
+  .backlinks-more {
+    padding: 0.4rem 1rem;
+    text-align: center;
+    font-size: 0.8em;
+    color: var(--gray);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--tertiary);
+    }
+  }
+}
+
+// ─── Content Area ──────────────────────────────────────────────────────────
+article {
+  > h1:first-child {
+    margin-top: 0;
+  }
+
+  // Section dividers with gold accent
+  h2 {
+    margin-top: 2.5rem;
+  }
+
+  // Lists
+  ul,
+  ol {
+    padding-left: 1.5rem;
+  }
+
+  li {
+    margin-bottom: 0.35rem;
+
+    // Nested list indentation
+    ul,
+    ol {
+      margin-top: 0.35rem;
+    }
+  }
+
+  // Links
+  a {
+    font-weight: 500;
+  }
+
+  // Internal wikilinks
+  a.internal {
+    background-color: var(--highlight);
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--tertiary) 30%, transparent);
+    }
+  }
+
+  // Blockquotes
+  blockquote {
+    border-left: 3px solid var(--tertiary);
+    padding: 0.75rem 1rem;
+    margin: 1.25rem 0;
+    background: var(--highlight);
+    border-radius: 0 8px 8px 0;
+  }
+
+  // Tables
+  table {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--lightgray);
+  }
+
+  th {
+    background: var(--highlight);
+    border-bottom: 2px solid var(--tertiary);
+  }
+
+  tr:last-child {
+    border-bottom: none;
+  }
+}
+
+// ─── Footer ────────────────────────────────────────────────────────────────
+footer {
+  padding: 2rem 0;
+  border-top: 1px solid var(--lightgray);
+  margin-top: 3rem;
+  font-size: 0.85em;
+  color: var(--gray);
+
+  a {
+    color: var(--secondary);
+
+    &:hover {
+      color: var(--tertiary);
+    }
+  }
+}
+
+// ─── Divider Lines ─────────────────────────────────────────────────────────
+hr {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--tertiary), transparent);
+  border: none;
+  margin: 2.5rem 0;
+}
+
+// ─── Spacer ────────────────────────────────────────────────────────────────
+.spacer {
+  flex: 1;
+}
+
+// ─── Search Dialog / Modal ─────────────────────────────────────────────────
+.search-dialog {
+  .search-input {
+    border: 2px solid var(--tertiary);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 1em;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px var(--highlight);
+    }
+  }
+
+  .search-results {
+    a {
+      padding: 0.75rem;
+      border-radius: 6px;
+      transition: background 0.15s;
+
+      &:hover {
+        background: var(--highlight);
+      }
+    }
+  }
+
+  // Keyboard shortcut hints
+  .search-shortcut {
+    font-size: 0.75em;
+    color: var(--gray);
+    background: var(--lightgray);
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    font-family: var(--codeFont);
+  }
+}
+
+// ─── Navigation Progress Bar ───────────────────────────────────────────────
+.navigation-progress {
+  background: linear-gradient(90deg, var(--tertiary), var(--lightgray));
+  height: 3px;
+}
+
+// ─── Popover Preview ───────────────────────────────────────────────────────
+.popover {
+  border: 1px solid var(--lightgray);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: var(--light);
+
+  &::before {
+    border-top-color: var(--lightgray);
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--tertiary);
+    padding-bottom: 0.5rem;
+  }
+}
+
+// ─── Dark Mode Polish ──────────────────────────────────────────────────────
+.darkmode {
+  svg.sun { display: none; }
+  svg.moon { display: block; }
+}
+
+body:has(.darkmode .moon[style*="display: none"]),
+body:has(.darkmode .sun[style*="display: block"]) {
+  .darkmode {
+    svg.sun { display: block; }
+    svg.moon { display: none; }
+  }
+}
+
+// ─── Mobile Responsiveness ─────────────────────────────────────────────────
+@media all and ($mobile) {
+  // Reduce font sizes for mobile
+  body {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  // Header adjustments
+  header {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+
+    h1 {
+      font-size: 1.3rem;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  // Sidebar left on mobile: compact horizontal toolbar
+  .sidebar.left {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  // Explorer hidden on mobile (hamburger approach via Quartz mobile toggle)
+  .explorer {
+    display: none;
+  }
+
+  // Right sidebar on mobile: stack vertically, hide graph
+  .sidebar.right {
+    flex-direction: column;
+
+    .graph {
+      display: none;
+    }
+
+    .toc {
+      max-height: 200px;
+      overflow-y: auto;
+    }
+  }
+
+  // Breadcrumb simplification on mobile
+  .breadcrumbs {
+    font-size: 0.8em;
+  }
+
+  // Content area full width
+  article {
+    padding: 0 0.5rem;
+  }
+}
+
+// ─── Tablet Responsiveness ─────────────────────────────────────────────────
+@media all and ($tablet) {
+  body {
+    font-size: 16px;
+  }
+
+  header {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .sidebar.right {
+    .graph {
+      display: none;
+    }
+  }
+}
+
+// ─── Print Styles ──────────────────────────────────────────────────────────
+@media print {
+  .sidebar,
+  header::after,
+  .navigation-progress,
+  .darkmode,
+  .reader-mode {
+    display: none !important;
+  }
+
+  header {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  header h1 {
+    color: var(--dark) !important;
+  }
+
+  article {
+    max-width: 100%;
+  }
+}
