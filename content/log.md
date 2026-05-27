@@ -1,5 +1,30 @@
 # 更新日誌
 
+---
+
+## [2026-05-28] audit-fix | Deep content audit remediation (3 issues fixed)
+
+### Fix 1: 歷代志 missing 綱目
+- Merged outline from 歷代志上.md + 歷代志下.md RV source files
+- Inserted complete 綱目 section (2644 chars) into bible/歷代志.md
+- Preserved scriptural order and hierarchical numbering (壹→一→1→a)
+
+### Fix 3: English mixing in Chinese prose (7 files)
+- concepts/話.md: Added transliterations for Greek terms — logos（邏各斯）×8, rhema（瑞瑪）×9
+- concepts/愛.md: Added agape（阿加佩）transliteration
+- concepts/新人.md: Fixed `.actual` typo → 實際的
+- concepts/神命定之路.md: Fixed `Persistence` → 持續地
+- concepts/地方召會.md: Added DNA（脫氧核糖核酸）transliteration
+- bible/路得記.md: Fixed `humble` → 謙卑
+- log.md: Changed `biblical` → 聖經的 (3 instances)
+
+### Fix 4: SCHEMA.md concept page structure update
+- Updated Concept Pages section to match actual vault implementation
+- Changed from: 定義 → 聖經依據 → 屬靈經歷 → 實踐應用 → 相關概念 → 來源
+- Changed to: 定義 → 關鍵經文 → 概念發展 → 職事啟示 → 實行應用 → 屬靈經歷 → 相關概念 → 來源
+- All 99 concept pages already follow the corrected structure
+
+
 ## [2026-05-28] content | Added 屬靈經歷 section to 33 concept pages (batch 1 of 2)
 - Added `## 屬靈經歷` section with 2-3 bullet points of spiritual experience/application to 33 concept pages (first 33 alphabetically)
 - Content grounded in Life Study ministry teaching (Watchman Nee / Witness Lee writings)
@@ -843,7 +868,7 @@ target: bible/*.md (職事啟示 & 實行應用 sections)
 
 ### Changes
 - **Existing pages deepened (9)**: 信心與行為, 外面與裡面, 字句與靈, 建造與工作, 律法與恩典, 知識與生命, 舊造與新造, 道理與啟示, 魂與靈
-  - 定義 sections expanded from 1-2 lines to 6-8 lines with theological definitions and biblical basis
+  - 定義 sections expanded from 1-2 lines to 6-8 lines with theological definitions and 聖經的 basis
   - 職事啟示 sections expanded with Watchman Nee and Witness Lee perspectives, direct quotes and ministry references
 - **New comparison pages (6)**: 基督與召會, 生命樹與知識樹, 申言與教導, 恩賜與職事, 神性與人性, 個人與團體
   - Each has 86-87 lines with full SCHEMA structure: 定義, 比較, 概念發展, 職事啟示, 實行應用, 關鍵經文, 相關概念, 來源
@@ -925,7 +950,7 @@ target: bible/*.md (職事啟示 & 實行應用 sections)
 ## 2026-05-28 — Deep Audit Remediation
 
 ### Structural Changes
-- Created `entities/biblical-figures/` for biblical人物 (moved 保羅 from `entities/persons/`, moved 大衛 from `concepts/` with type updated to `entity`)
+- Created `entities/聖經的-figures/` for 聖經人物 (moved 保羅 from `entities/persons/`, moved 大衛 from `concepts/` with type updated to `entity`)
 - Renamed `entities/persons/倪柝声.md` → `倪柝聲.md` (SC→TC)
 - Renamed `bible/齣埃及記.md` → `出埃及記.md` (wrong TC variant)
 - Renamed `bible/哈巴穀書.md` → `哈巴谷書.md` (wrong TC variant)
